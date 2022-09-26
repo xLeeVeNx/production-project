@@ -1,1 +1,1 @@
-export {AboutLazyScreen as AboutScreen} from './ui/AboutLazyScreen';
+export { AboutLazyScreen as AboutScreen } from './ui/AboutLazyScreen';

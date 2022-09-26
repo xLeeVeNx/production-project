@@ -1,1 +1,1 @@
-export {MainLazyScreen as MainScreen} from './ui/MainLazyScreen';
+export { MainLazyScreen as MainScreen } from './ui/MainLazyScreen';

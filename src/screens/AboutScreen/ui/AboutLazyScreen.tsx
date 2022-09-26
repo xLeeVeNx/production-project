@@ -1,10 +1,10 @@
-import {lazy} from "react";
+import { lazy } from 'react';
 
-export const AboutLazyScreen = lazy(() => {
-    return new Promise(resolve => {
+export const AboutLazyScreen = lazy(async () => {
+    return await new Promise(resolve => {
         setTimeout(() => {
-            // @ts-ignore
-            return resolve(import('./AboutScreen').then(module => ({default: module.AboutScreen})));
-        }, 1500)
-    })
+            // @ts-expect-error
+            return resolve(import('./AboutScreen').then(module => ({ default: module.AboutScreen })));
+        }, 1500);
+    });
 });
