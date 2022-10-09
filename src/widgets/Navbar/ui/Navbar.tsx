@@ -1,7 +1,7 @@
-import { classNames } from 'shared';
+import { AppLink } from 'shared/ui';
+import { classNames } from 'shared/lib';
 import { FC } from 'react';
 import style from './Navbar.module.scss';
-import { AppLink } from 'shared/ui';
 import { EAppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { useTranslation } from 'react-i18next';
 

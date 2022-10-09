@@ -1,7 +1,7 @@
-import { classNames } from 'shared';
+import { Button } from 'shared/ui';
+import { classNames } from 'shared/lib';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button } from 'shared/ui';
 import { EButtonThemes } from 'shared/ui/Button/Button';
 
 interface LangSwitcherProps {

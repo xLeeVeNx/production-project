@@ -20,11 +20,15 @@
     "esModuleInterop": true,
     // Позволяет импортировать пакеты без использования *
     // import * as path from 'path'
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
   },
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+  ]
 }

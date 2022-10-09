@@ -1,10 +1,10 @@
-import { classNames } from 'shared';
+import { Button } from 'shared/ui';
+import { classNames } from 'shared/lib';
 import { FC } from 'react';
 import { useTheme } from 'shared/contexts';
 import DefaultIcon from 'shared/assets/images/icons/theme-default.svg';
 import DarkIcon from 'shared/assets/images/icons/theme-dark.svg';
 import { EThemes } from 'shared/contexts/ThemeContext/ThemeContext';
-import { Button } from 'shared/ui';
 import { EButtonThemes } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
