@@ -9,7 +9,7 @@ on:
 
 jobs:
   ci pipeline:
-    runs_on: ubuntu-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [ 17.x ]
