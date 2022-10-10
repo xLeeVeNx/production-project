@@ -96,7 +96,9 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build:storybook": "build-storybook -c ./config/storybook",
-    "test:ui": "yarn loki test"
+    "test:ui": "yarn loki test",
+    "test:ui:ok": "yarn loki approve",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static"
   },
   "loki": {
     "configurations": {

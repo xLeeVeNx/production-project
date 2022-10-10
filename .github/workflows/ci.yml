@@ -33,4 +33,4 @@ jobs:
       - name: build storybook
         run: yarn build:storybook
       - name: run screenshots tests
-        run: loki --requireReference --reactUri file:./storybook-static
+        run: yarn test:ui:ci
