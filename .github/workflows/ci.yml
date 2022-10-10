@@ -30,3 +30,7 @@ jobs:
         run: yarn lint:scss
       - name: run unit tests
         run: yarn test:unit
+      - name: build storybook
+        run: yarn build:storybook
+      - name: run screenshots tests
+        run: loki --requireReference --reactUri file:./storybook-static
