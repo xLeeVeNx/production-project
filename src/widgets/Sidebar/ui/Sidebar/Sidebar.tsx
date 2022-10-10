@@ -3,10 +3,11 @@ import { FC, useState } from 'react';
 import style from './Sidebar.module.scss';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import { LangSwitcher } from 'widgets/LangSwitcher';
+import { useTranslation } from 'react-i18next';
 
 export const Sidebar: FC = () => {
     const [collapsed, setCollapsed] = useState<boolean>(false);
-
+    const { t } = useTranslation();
     const onToggle = () => setCollapsed(!collapsed);
 
     return (
@@ -15,7 +16,9 @@ export const Sidebar: FC = () => {
                 <ThemeSwitcher/>
                 <LangSwitcher className={style.switcher} />
             </div>
-            <button data-testid="sidebar-toggle" onClick={onToggle}>toggle</button>
+            <button data-testid="sidebar-toggle" onClick={onToggle}>
+                {collapsed ? t('Развернуть') : t('Свернуть')}
+            </button>
         </aside>
     );
 };

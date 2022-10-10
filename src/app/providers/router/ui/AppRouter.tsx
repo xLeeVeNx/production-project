@@ -11,7 +11,7 @@ export const AppRouter = () => {
                     routesConfig.map(({ path, element }) => (
                         <Route key={path} path={path} element=
                             {
-                                <div className="app-wrapper">{element}</div>
+                                <div className="appWrapper">{element}</div>
                             }
                         />
                     )
