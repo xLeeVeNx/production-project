@@ -97,6 +97,9 @@
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "build:storybook": "build-storybook -c ./config/storybook",
     "test:ui": "yarn loki test",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli --from .loki/report.json --report .loki/report.html",
+    "test:ui:report": "yarn test:ui:json && yarn test:ui:html",
     "test:ui:ok": "yarn loki approve",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static"
   },
