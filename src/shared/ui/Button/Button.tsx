@@ -4,19 +4,29 @@ import style from './Button.module.scss';
 
 export const enum EButtonThemes {
     reset = 'reset',
-    outline = 'outline'
+    outline = 'outline',
+    background = 'background',
+    backgroundInverted = 'backgroundInverted'
+}
+
+export const enum EButtonSizes {
+    M = 'sizeM',
+    L = 'sizeL',
+    XL = 'sizeXL'
 }
 
 interface ButtonProps extends DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>,
 HTMLButtonElement> {
     theme?: EButtonThemes;
+    square?: boolean;
+    size?: EButtonSizes;
 }
 
-export const Button: FC<ButtonProps> = ({ children, className, theme, ...restProps }) => {
+export const Button: FC<ButtonProps> = ({ children, className, theme, square, size, ...restProps }) => {
     return (
         <button
             {...restProps}
-            className={classNames(style.button, {}, [className, style[theme]])}
+            className={classNames(style.button, { [style.square]: square }, [className, style[theme], style[size]])}
         >
             {children}
         </button>
