@@ -9,9 +9,7 @@ export default {
     component: Modal
 } as ComponentMeta<typeof Modal>;
 
-const Template: ComponentStory<typeof Modal> = (args) => (
-    <Modal {...args} />
-);
+const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
 
 export const Light = Template.bind({});
 Light.args = {

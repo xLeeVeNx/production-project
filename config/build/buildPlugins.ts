@@ -5,7 +5,7 @@ import { DefinePlugin, HotModuleReplacementPlugin, ProgressPlugin, WebpackPlugin
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { IBuildOptions } from './types/config';
 
-export const buildPlugins = ({ paths, port, isDev }: IBuildOptions): WebpackPluginInstance[] => {
+export const buildPlugins = ({ paths, isDev }: IBuildOptions): WebpackPluginInstance[] => {
     const plugins = [
         new HTMLWebpackPlugin({
             template: paths.html
