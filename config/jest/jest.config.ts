@@ -25,8 +25,9 @@ export default {
     ],
     // An array of directory names to be searched recursively up from the requiring module's location
     moduleDirectories: [
-        'node_modules', 'src'
+        'node_modules'
     ],
+    modulePaths: ['<rootDir>src'],
     // The root directory that Jest should scan for tests and modules within
     rootDir: '../../',
     // The glob patterns Jest uses to detect test files
@@ -38,6 +39,9 @@ export default {
     moduleNameMapper: {
         '\\.s?css$': 'identity-obj-proxy',
         '\\.svg': path.resolve(__dirname, 'JestEmptyComponent.tsx')
+    },
+    globals: {
+        __IS_DEV__: true
     }
 
     // All imported modules in your tests should be mocked automatically

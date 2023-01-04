@@ -30,5 +30,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "./config/jest/setupTests.ts",
+    "node_modules/eslint-plugin-react/lib/types.d.ts"
   ]
 }

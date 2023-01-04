@@ -4,14 +4,17 @@ import './app/styles/main.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'shared/contexts';
 import { ErrorBoundary } from 'app/providers/ErrorBoundary';
+import { StoreProvider } from 'app/providers/StoreProvider';
 
 render(
-    <BrowserRouter>
-        <ErrorBoundary>
-            <ThemeProvider>
-                <App/>
-            </ThemeProvider>
-        </ErrorBoundary>
-    </BrowserRouter>,
+    <StoreProvider>
+        <BrowserRouter>
+            <ErrorBoundary>
+                <ThemeProvider>
+                    <App/>
+                </ThemeProvider>
+            </ErrorBoundary>
+        </BrowserRouter>
+    </StoreProvider>,
     document.getElementById('root')
 );

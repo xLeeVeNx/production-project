@@ -7,7 +7,7 @@ import { AppLink, Button } from 'shared/ui';
 import { EButtonSizes, EButtonThemes } from 'shared/ui/Button/Button';
 import { EAppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { t } from 'i18next';
-import { RoutesPaths } from 'app/config/routerConfig/routerConfig';
+import { RoutesPaths } from 'app/config/routesConfig/routesConfig';
 import MainIcon from 'shared/assets/images/icons/main.svg';
 import AboutIcon from 'shared/assets/images/icons/about.svg';
 
