@@ -4,7 +4,9 @@ import style from './Button.module.scss';
 
 export const enum EButtonThemes {
     reset = 'reset',
+    resetInverted = 'resetInverted',
     outline = 'outline',
+    outlineInverted = 'outlineInverted',
     background = 'background',
     backgroundInverted = 'backgroundInverted'
 }

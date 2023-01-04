@@ -16,10 +16,13 @@ module.exports = {
     },
     plugins: [
         'react',
-        'i18next'
+        'i18next',
+        'react-hooks'
     ],
     rules: {
         'react/display-name': 'off',
+        'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
         '@typescript-eslint/prefer-includes': 'off',
         '@typescript-eslint/consistent-type-assertions': 'off',
         'react/react-in-jsx-scope': 'off',

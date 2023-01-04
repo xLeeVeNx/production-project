@@ -28,6 +28,12 @@ Reset.args = {
     theme: EButtonThemes.reset
 };
 
+export const ResetInverted = Template.bind({});
+ResetInverted.args = {
+    children: 'Button',
+    theme: EButtonThemes.resetInverted
+};
+
 export const ResetDark = Template.bind({});
 ResetDark.args = {
     children: 'Button',
@@ -35,10 +41,23 @@ ResetDark.args = {
 };
 ResetDark.decorators = [ThemeDecorator(EThemes.dark)];
 
+export const ResetDarkInverted = Template.bind({});
+ResetDarkInverted.args = {
+    children: 'Button',
+    theme: EButtonThemes.resetInverted
+};
+ResetDarkInverted.decorators = [ThemeDecorator(EThemes.dark)];
+
 export const Outline = Template.bind({});
 Outline.args = {
     children: 'Button',
     theme: EButtonThemes.outline
+};
+
+export const OutlineInverted = Template.bind({});
+OutlineInverted.args = {
+    children: 'Button',
+    theme: EButtonThemes.outlineInverted
 };
 
 export const OutlineDark = Template.bind({});
@@ -47,6 +66,13 @@ OutlineDark.args = {
     theme: EButtonThemes.outline
 };
 OutlineDark.decorators = [ThemeDecorator(EThemes.dark)];
+
+export const OutlineDarkInverted = Template.bind({});
+OutlineDarkInverted.args = {
+    children: 'Button',
+    theme: EButtonThemes.outlineInverted
+};
+OutlineDarkInverted.decorators = [ThemeDecorator(EThemes.dark)];
 
 export const SquareSizeM = Template.bind({});
 SquareSizeM.args = {

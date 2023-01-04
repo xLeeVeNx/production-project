@@ -4,7 +4,7 @@ export const LOCAL_STORAGE_THEME_KEY = 'theme';
 
 export const enum EThemes {
     dark = 'dark',
-    default = ''
+    light = 'light'
 }
 
 interface ThemeContextProps {
@@ -14,10 +14,13 @@ interface ThemeContextProps {
 
 export const ThemeContext = createContext<ThemeContextProps>({});
 
-const initialTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as EThemes || EThemes.default;
+const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as EThemes || EThemes.light;
 
-export const ThemeProvider: FC = ({ children }) => {
-    const [theme, setTheme] = useState<EThemes>(initialTheme);
+interface ThemeProviderProps {
+    initialTheme?: EThemes;
+}
+export const ThemeProvider: FC<ThemeProviderProps> = ({ initialTheme, children }) => {
+    const [theme, setTheme] = useState<EThemes>(initialTheme || defaultTheme);
 
     const defaultValue = useMemo(() => ({
         theme,

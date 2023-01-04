@@ -15,5 +15,5 @@ export const parameters = {
 };
 
 addDecorator(StyleDecorator);
-addDecorator(ThemeDecorator(EThemes.default));
+addDecorator(ThemeDecorator(EThemes.light));
 addDecorator(RouterDecorator);

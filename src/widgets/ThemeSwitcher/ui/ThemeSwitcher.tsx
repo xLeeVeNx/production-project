@@ -20,7 +20,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
             onClick={toggleTheme}
         >
             {
-                theme === EThemes.default ? <DefaultIcon /> : <DarkIcon />
+                theme === EThemes.light ? <DefaultIcon /> : <DarkIcon />
             }
         </Button>
     );

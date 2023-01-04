@@ -1,9 +1,11 @@
 import { Story } from '@storybook/react';
 import { EThemes } from 'shared/contexts/ThemeContext/ThemeContext';
-import { classNames } from 'shared/lib';
 
-export const ThemeDecorator = (theme: EThemes) => (StoryComponent: Story) => (
-    <div className={classNames('app', {}, [theme])}>
-        <StoryComponent />
-    </div>
-);
+export const ThemeDecorator = (theme: EThemes) => (StoryComponent: Story) => {
+    document.body.classList.remove(EThemes.light, EThemes.dark);
+    document.body.classList.add(theme);
+
+    return (
+        <StoryComponent/>
+    );
+};
