@@ -4,9 +4,10 @@ import { EButtonSizes } from 'shared/ui/Button/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { decrement, increment } from 'entities/Counter';
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue';
-import { t } from 'i18next';
+import { useTranslation } from 'react-i18next';
 
 export const Counter = () => {
+    const { t } = useTranslation();
     const dispatch = useDispatch();
     const counterValue = useSelector(getCounterValue);
 
